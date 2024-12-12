@@ -14,11 +14,11 @@ import os
 import tkinter as tk
 
 # Load environment variables
-dotenv.load_dotenv("C:/Environics/chatbot.env.txt")
+dotenv.load_dotenv("/path/to/your/env/file.env")
 api_key = os.environ.get('OPENAI_API_KEY')
 
 # Directory containing documents to train the chatbot
-directory = "//willow/Users/Nicole Newhouse/Alldocs"
+directory = "/path/to/your/documents"
 
 # Load and preprocess documents
 loader = PyPDFDirectoryLoader(directory)
@@ -67,7 +67,7 @@ class ChatbotUI:
 
         # Load and display the logo
         self.logo = tk.PhotoImage(
-            file="//willow/marketing/Brand Assets/Logos/Environics Analytics/Environics-Analytics-Logo-75.png")
+            file="/path/to/marketing/company/branding/logo.png")
         self.logo_label = tk.Label(master, image=self.logo)
         self.logo_label.pack()
 
